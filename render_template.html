@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf8">
+  </head>
+  <body>
+    <table>
+      <tr>
+        <th>书名</th>
+        <th>编号</th>
+        <th>借书日期</th>
+      </tr>
+      {% for record in records %}
+      <tr>
+        <td>{{ record[0] }}</td>
+        <td>{{ record[1] }}</td>
+        <td>{{ record[2] }}</td>
+      </tr>
+      {% endfor %}
+    </table>
+  </body>
+</html>

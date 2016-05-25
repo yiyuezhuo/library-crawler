@@ -2,3 +2,5 @@ data/
 history/
 __pycache__
 temp.html
+.ipynb_checkpoints
+__records.json

@@ -14,10 +14,12 @@ from itertools import chain
 
 
 def fff(res,temp_path='temp.html'):
-    if type(res)!=str:
+    if type(res)==requests.models.Response:
         res=res.content#.decode('utf8')
+    if type(res)==bytes:
+        res=res.decode('utf8')
     with open(temp_path,'wb') as f:
-        f.write(res)
+        f.write(res.encode('utf8'))
     webbrowser.open(temp_path)
     
 class MaxiterBreak(Exception):
